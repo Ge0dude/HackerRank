@@ -22,5 +22,7 @@ for x in arr:
     elif x == 0:
         zeroCount += 1
         
-print ("{0:.6f}".format(positiveCount/n), "{0:.6f}".format(negativeCount/n), 
-"{0:.6f}".format(zeroCount/n))
+print ("{0:.6f}".format(positiveCount/n)) 
+print ("{0:.6f}".format(negativeCount/n))
+print ("{0:.6f}".format(zeroCount/n))
+
