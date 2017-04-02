@@ -8,12 +8,6 @@ Created on Mon Apr  3 07:34:31 2017
 
 n = 6
 
-spaceCount = n 
-print(" " * spaceCount + "#")
-counter = 1
-diff = 0
 
-        
-while counter <= n:
-    print(' ' * (spaceCount - counter) + '#' * counter)
-    counter += 1
+for x in range(n + 1):
+    print (' ' * (n - x) + x * '#')
