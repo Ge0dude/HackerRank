@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr  3 16:56:24 2017
+
+@author: brendontucker
+
+wish this problem were generalized--maybe I'll write my code in an n X n manner
+instead of a 6 X 6
+"""
+
+arr = [[1, 1, 1, 0, 0, 0], 
+       [0, 1, 0, 0, 0, 0], 
+       [1, 1, 1, 0, 0, 0], 
+       [0, 9, 2, -4, -4, 0], 
+       [0, 0, 0, -2, 0, 0], 
+       [0, 0, -1, -2, -4, 0]]
+       
+rightEnd = 3
+leftEnd = 0
+topRow = 0
+midRow = 1
+bottomRow = 2
+glassCounter = 0
+maxVal = 0
+
+
+
+while bottomRow < 6:
+    rightEnd = 3
+    leftEnd = 0
+    while rightEnd <= 7: 
+        glassCounter = sum(arr[topRow][leftEnd:rightEnd]) 
+        glassCounter += arr[midRow][rightEnd //(leftEnd + 2)]
+        glassCounter += sum(arr[bottomRow][leftEnd:rightEnd])
+        if glassCounter > maxVal:
+            maxVal = glassCounter
+        glassCounter = 0
+        rightEnd += 1
+        leftEnd += 1
+    topRow += 1
+    midRow += 1
+    bottomRow += 1
+    
+print(maxVal)
+    
+    
+    
+    
+    
+    
+    
