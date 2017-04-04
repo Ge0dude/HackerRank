@@ -10,6 +10,7 @@ could just do a lot of iterations...
 but thinking there must be a more exact answer?
 
 gots to do some testing
+wait.... is this just linear algebra ??? I'm about to feel really stupid if I didn't catch that !
 """
 
 x1 = 0 
