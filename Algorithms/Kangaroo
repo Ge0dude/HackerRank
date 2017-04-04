@@ -27,8 +27,46 @@ for x in range(20):
 for x in range(20):
     value = (x * v2) + x2 
     x2Arr.append(value)
-    
+
+
+boo1 = False    
 #relative speeds are important because if one kangaroo never catches the other
 #then it will be gone for good and they can never catch each other
 #just need a loop that checks if the kangaroo with teh smaller start value is 
 #behind, if she passes adn doesn't land on teh same spot then hope is lost
+
+
+if x1 > x2:
+    big = v1
+    bStart = x1
+    small = v2
+    sStart = x2
+elif x2 > x1:
+    big = v2
+    bStart = x2
+    small = v1
+    sStart = x1
+elif x1 == x2:
+    if v1 > v2:
+        big = v1
+        bStart = x1
+        small = v2
+        sStart = x2
+    elif v2 > v1:
+        big = v2
+        bStart = x2
+        small = v1    
+        sStart = x1
+    else:
+        boo1 = True #return true
+
+#maybe an if boo1 statement here        
+for x in range(1,10000):
+    bigTotal = (big * x) + bStart
+    smallTotal = (small * x) + sStart
+    if smallTotal > bigTotal:
+        boo1 = False
+        break
+    elif smallTotal == bigTotal:
+        boo1 = True
+        break
