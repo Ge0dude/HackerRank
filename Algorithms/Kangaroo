@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  4 12:43:15 2017
+
+@author: brendontucker
+
+could just do a lot of iterations...
+
+but thinking there must be a more exact answer?
+
+gots to do some testing
+"""
+
+x1 = 0 
+v1 = 3
+x2 = 4
+v2 = 2
+
+x1Arr = []
+x2Arr = []
+
+for x in range(20):
+    value = x * v1 
+    x1Arr.append(value)
+    
+for x in range(20):
+    value = (x * v2) + x2 
+    x2Arr.append(value)
+    
+#relative speeds are important because if one kangaroo never catches the other
+#then it will be gone for good and they can never catch each other
+#just need a loop that checks if the kangaroo with teh smaller start value is 
+#behind, if she passes adn doesn't land on teh same spot then hope is lost
