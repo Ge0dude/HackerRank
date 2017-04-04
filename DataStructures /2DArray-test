@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Apr  3 16:56:24 2017
+Created on Tue Apr  4 07:58:42 2017
 
 @author: brendontucker
-
-wish this problem were generalized--maybe I'll write my code in an n X n manner
-instead of a 6 X 6
 """
 
 arr = [[1, 1, 1, 0, 0, 0], 
@@ -23,7 +20,7 @@ topRow = 0
 midRow = 1
 bottomRow = 2
 glassCounter = 0
-maxVal = None
+maxVal = []
 
 
 
@@ -35,10 +32,7 @@ while bottomRow < 6:
         glassCounter = sum(arr[topRow][leftEnd:rightEnd]) 
         glassCounter += arr[midRow][midValue]
         glassCounter += sum(arr[bottomRow][leftEnd:rightEnd])
-        if rightEnd == 3 and topRow == 0:
-            maxVal = glassCounter
-        elif glassCounter > maxVal:
-            maxVal = glassCounter
+        maxVal.append(glassCounter)
         glassCounter = 0
         rightEnd += 1
         midValue += 1
@@ -46,12 +40,4 @@ while bottomRow < 6:
     topRow += 1
     midRow += 1
     bottomRow += 1
-    
-print(maxVal)
-    
-    
-    
-    
-    
-    
     
