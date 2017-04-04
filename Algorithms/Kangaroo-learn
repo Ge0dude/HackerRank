@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr  5 07:02:57 2017
+
+@author: brendontucker
+
+thought this code was very different from mine, but soltions is actually 
+very similar, implementation is a bit quicker with X and Y 
+"""
+x1 = 0 
+v1 = 3
+x2 = 4
+v2 = 2
+
+X = [x1, v1]
+Y = [x2, v2]
+back = min(X, Y)
+fwd = max(X, Y)
+dist = fwd[0] - back[0]
+
+while back[0] < fwd[0]:
+    back[0] += back[1]
+    fwd[0] += fwd[1]
+    if fwd[0] - back[0] >= dist:
+        break
+
+print ["NO", "YES"][back[0] == fwd[0]]
