@@ -10,17 +10,17 @@ s = 7
 t = 11
 a = 5
 b = 15
-apples = [-2, 2, 1]
+apple = [-2, 2, 1]
 oranges =  [5, -6] #if these were bigger then we'd want to go for a dict
 appleCounter = 0
 orangeCounter = 0
 
 
-for x in apples:
+for x in apple:
     if x + a in range(s,t):
         appleCounter += 1
 print(appleCounter)
-for x in oranges:
+for x in orange:
     if x + b in range(s,t):#because these repeated O(n) searches could add up
         orangeCounter += 1
 print(orangeCounter)        
