@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  4 10:17:06 2017
+
+@author: brendontucker
+
+mildly over-engineered solutions, don't really need the second array
+"""
+
+arr = [73, 67, 38, 33]
+newArr = []
+
+for x in arr:
+    if x < 38:
+        x = x
+        newArr.append(x)
+    elif x % 5 >= 3:
+        x = x + (5- (x % 5))
+        newArr.append(x)
+    else:
+        x = x
+        newArr.append(x)
