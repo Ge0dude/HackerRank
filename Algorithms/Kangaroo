@@ -64,9 +64,21 @@ elif x1 == x2:
 for x in range(1,10000):
     bigTotal = (big * x) + bStart
     smallTotal = (small * x) + sStart
+    if x == 1:
+        temp1 = bigTotal - smallTotal
+    if x == 2:
+        temp2 = bigTotal - smallTotal
+        if temp2 > temp1:
+            boo1 = False
+            break
     if smallTotal > bigTotal:
         boo1 = False
         break
     elif smallTotal == bigTotal:
         boo1 = True
         break
+    
+if boo1 == True:
+    print('YES')
+else:
+    print('NO')
