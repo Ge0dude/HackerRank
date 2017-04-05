@@ -9,35 +9,54 @@ I can do some recursion here, it would be tricky but I could do it
 or I can find the mathy solutions... 
 """
 
-a = [2 , 4]
-b = [16, 32, 96]
+a = [2]
+b = [20, 30, 12]
 bFactors = []
 #going to do this for one entry to see how it works, then consider recursive 
 #solutions
-
-
+b.sort()
 for x in range(2, b[0] + 1):
     if b[0] % x == 0:
         bFactors.append(x)
-
-
-
-for x in b:
-    for y in bFactors:
-        if x % y != 0:
-            bFactors.remove(y)
+        
+#for x in b:
+#    for y in bFactors:
+#        if x % y != 0:
+#            bFactors.remove(y)
+            
+counter = 0
+while counter < len(b):
+    counter2 = 0
+    while counter2 < len(bFactors):
+        if b[counter] % bFactors[counter2] != 0:
+            bFactors.remove(bFactors[counter2])
+            counter2 = counter2
+        else:
+            counter2 += 1
+    counter += 1
+    
+##guess I do have to use a while loop since I'm unsure of number of steps
+#being taken...
+            
 referenceFactors = []            
 for x in bFactors:
     referenceFactors.append(x)
+
+counter = 0
+while counter < len(a):
+    counter2 = 0
+    while counter2 < len(bFactors):
+        if bFactors[counter2] % a[counter] != 0:
+            bFactors.remove(bFactors[counter2])
+            counter2 = counter2
+        else:
+            counter2 += 1
+    counter += 1
             
-            
-            
-            
-            
-for x in a:
-    for y in bFactors:
-        if y % x != 0:
-            bFactors.remove(y)
+#for x in a:
+#    for y in bFactors:
+#        if y % x != 0:
+#            bFactors.remove(y)
 
 print(len(bFactors))
 
