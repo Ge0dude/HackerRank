@@ -4,8 +4,37 @@
 Created on Wed Apr  5 12:01:13 2017
 
 @author: brendontucker
+
+I can do some recursion here, it would be tricky but I could do it
+or I can find the mathy solutions... 
 """
 
 a = [2 , 4]
 b = [16, 32, 96]
 bFactors = []
+#going to do this for one entry to see how it works, then consider recursive 
+#solutions
+
+
+for x in range(1, b[0] + 1):
+    if b[0] % x == 0:
+        bFactors.append(x)
+
+
+
+for x in b:
+    for y in bFactors:
+        if x % y != 0:
+            bFactors.remove(y)
+            
+for x in bFactors: #not right...
+    for y in a:
+        if x % y != 0:
+            bFactors.remove(y)
+
+
+
+        
+#for x in bFactors:
+#    if b[1] % x != 0:
+#        bFactors.remove(x)
