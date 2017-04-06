@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  6 08:01:19 2017
+
+@author: brendontucker
+"""
+
+s = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+
+
+best = s[0]
+worst = s[0]
+bestCounter = 0
+worstCounter = 0
+for x in s:
+    if x > best:
+        bestCounter += 1
+        best = x
+    if x < worst:
+        worstCounter += 1
+        worst = x
+        
+        
+        
+
+
+
+#counter = 0
+#while counter < len(s):
+#    if counter == 0:
+#        best = s[counter]
+#    elif counter == 1:
+#        
