@@ -4,12 +4,15 @@
 Created on Fri Apr 21 07:38:42 2017
 
 @author: brendontucker
+
+ah, dealt with type conversion on input... read data as string type,
+need int
 """
 
 n = 4
 k = 1
 foodList = [3, 10, 2, 9]
-charged = 12
+charged = 7
 
 
 if k == len(foodList):
