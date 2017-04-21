@@ -20,7 +20,7 @@ import operator
 def most_common(L):
   # get an iterable of (item, iterable) pairs
   SL = sorted((x, i) for i, x in enumerate(L))
-  # print 'SL:', SL
+  print('SL:', SL)
   groups = itertools.groupby(SL, key=operator.itemgetter(0))
   # auxiliary function to get "quality" for an item
   def _auxfun(g):
@@ -30,17 +30,20 @@ def most_common(L):
     for _, where in iterable:
       count += 1
       min_index = min(min_index, where)
-    # print 'item %r, count %r, minind %r' % (item, count, min_index)
+    print ('item %r, count %r, minind %r' % (item, count, min_index))
     return count, -min_index
   # pick the highest-count/earliest item
   return max(groups, key=_auxfun)[0]
   
-#print(most_common(types))
+print(most_common(types))
 
 '''understanding enumerate better'''
 
-seasons = ['Spring', 'Summer', 'Fall', 'Winter', 'Rainy', 'Wet', 'Dry']
+seasons = ['Dry', 'Spring', 'Summer', 'Fall', 'Winter', 'Rainy', 
+'Wet', 'Dry', 'Dry']
 #creates a list of tuples 
-enumExample = list(enumerate(seasons, start = 12)) 
+#enumExample = list(enumerate(seasons, start = 12)) 
+
+
 
 
